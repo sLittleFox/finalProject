@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/normalize.css">
+    <link rel="stylesheet" href="../src/libs/OwlCarousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../src/libs/OwlCarousel2/dist/assets/owl.theme.default.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  <!-- для кнопок -->
+    <title>My Blog</title>
+</head>
+<body>
+    <div class="headerBlog">
+        <div class="logo">
+            <img id="mainLogo" src="../src/img/logo_lv.png" alt="Logo Blog" href="#">
+        </div >
+    </div>
+
+    <nav class="mainNav">
+        <n class="navbar navbar-expand-md navbar-dark bg-dark">    <!-- https://www.youtube.com/watch?v=L0uNai3XyKQ  - responsive menu-->
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse-target">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse items" id="collapse-target">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> link 2</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target">Our posts</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-target">
+                            <a href="" class="dropdown-item">Main sidebar</a>
+                            <a href="" class="dropdown-item">Left sidebar</a>
+                            <a href="" class="dropdown-item">Something else</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> link 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sliderSec section">
+            <div class="owl-carousel  owl-theme">
+                <div class="item"><img class="img-overlay" src="../src/img/aircraft.jpg" alt=""></div class="item">
+                <div class="item"><img class="img-overlay" src="../src/img/backpack.jpg" alt=""></div>
+                <div class="item"><img class="img-overlay" src="../src/img/girl.jpg" alt=""></div class="item">
+                <div class="item"><img class="img-overlay" src="../src//img/hipster.jpg" alt=""></div class="item">
+                <div class="item"><img class="img-overlay" src="../src//img/notepad.jpeg" alt=""></div class="item">
+                <div class="item"><img class="img-overlay" src="../src/img/business.jpg" alt=""></div class="item">
+                <div class="item"><img class="img-overlay" src="../src/img/woman.jpg" alt=""></div class="item">
+                <div class="item"><img class="img-overlay" src="../src/img/bridge.jpeg" alt=""></div class="item">
+            </div>
+<!--             <div class="owl-theme">
+                <div class="owl-controls">
+                    <div class="owl-nav">
+                        <div class="owl-prev">
+                            <i class="fa fa-angle-double-left"></i>
+                        </div> 
+                        <div class="owl-next">
+                            <i class="fa fa-angle-double-right"></i>
+                        </div>                       
+                    </div> 
+                </div> 
+            </div> -->
+        </div>
+    </div>
+    <div class="wrapper container">
+        <div class="row">
+            <div class="mainWrapper  col-md-8">
+                <div class="mainSection">
+                    <div class="blogPost" id="blogPost">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebarWrapper">
+                    <div class="sidebar ready-widget section col-md-4" id='sidebar2'>
+                        <h2 class="sidebar">Right sidebar</h2>
+                        <div class="widget">
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="newPost">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1>Create a new post</h1>
+                                </div>
+                                <form class="modal-body form-group">
+                                    <div class="dropDownTag">
+                                        <label for="dropDownSelect" class="col-md-6">Choose tag type for new post</label>
+                                        <select class="form-control col-md-6" id="dropDownSelect">
+                                            <option>Beauty</option>
+                                            <option>Business</option>
+                                            <option>Fashion</option>
+                                            <option>Food</option>
+                                            <option>Learn</option>
+                                            <option>Music</option>
+                                            <option>Nature</option>
+                                            <option>People</option>
+                                            <option>Photography</option>
+                                        </select>
+                                    </div>
+                                    <div class="postTitle">
+                                        <label for="postTitle" class="col-md-6">Write some title for new post</label>
+                                        <input  type="text" class="form-control col-md-6" id="newPostTitle">
+                                    </div>
+                                    <div class="downloadImg">
+                                        <input type="file" id="inputImg" accept="image/*"> 
+                                        <label for="input" id="newImg">Download image</label>
+                                    </div>
+                                    <div class="textDescription col-md-8">
+                                        <label for="newPostDescription">Description:</label>
+                                        <textarea class="form-control" rows="5" id="newPostDescription"></textarea>
+                                    </div>
+                                </form>
+                                <div class="modal-footer">
+                                    <input  class="btn btn-add btn-success" data-dismiss="modal" value="Add" id="addPost">
+                                    <input  class="btn btn-default btn-danger" data-dismiss="modal" value="Close">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-toggle="modal" class="btn-primary" data-target="#myModal">Create a new post</button>
+                </div>
+                <div class="paginationMain">
+                    <ul class="pagination" id="pagination">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                      </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../src/libs/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../src/libs/OwlCarousel2/dist/owl.carousel.js"></script>
+    <script src="../src/js/defaultPost.js"></script>
+    <script src="../src/js/newPost.js"></script>
+    <script src="../src/js/script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
